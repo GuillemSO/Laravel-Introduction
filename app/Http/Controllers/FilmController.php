@@ -136,9 +136,28 @@ class FilmController extends Controller
 
         // Sort films by year
         usort($films_filtered, function($a, $b) {
-            return $a['year'] <=> $b['year'];
+            return $b['year'] <=> $a['year'];
         });
 
         return view("films.list", ["films" => $films_filtered, "title" => $title]);
+    }
+
+    /**
+     * Lista películas por género
+     */
+    public function countFilms()
+    {   
+        $filmsArray = [];
+        $title = "Número de peliculas";
+        $films = FilmController::readFilms();
+
+        foreach ($films as $film) {
+            $filmsArray[] = $film;
+        }
+
+        $count = count($filmsArray);
+        
+        
+        return view("films.count", ["filmsArray" => $count, "title" => $title]);
     }
 }
