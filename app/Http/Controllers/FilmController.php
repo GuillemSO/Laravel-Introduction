@@ -86,11 +86,34 @@ class FilmController extends Controller
     /**
      * Lista películas de ese año
      */
-    public function listByYear($year = null)
+    public function listByYear($year)
     {   
         $films_filtered = [];
         $title = "Listado de todas las pelis de X año";
+        $films = FilmController::readFilms();
 
+        foreach ($films as $film) {
+            if ($film['year'] == $year)
+            $films_filtered[] = $film;
+        }
+        
+
+        return view("films.list", ["films" => $films_filtered, "title" => $title]);
+    }
+
+    /**
+     * Lista películas de ese año
+     */
+    public function listByGenre($genre)
+    {   
+        $films_filtered = [];
+        $title = "Listado de todas las pelis de ". $genre;
+        $films = FilmController::readFilms();
+
+        foreach ($films as $film) {
+            if ($film['genre'] == $genre)
+            $films_filtered[] = $film;
+        }
         
 
         return view("films.list", ["films" => $films_filtered, "title" => $title]);
