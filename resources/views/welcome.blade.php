@@ -28,6 +28,36 @@
 
     <!-- Include any additional HTML or Blade directives here -->
 
+
+    <form action="{{action('App\Http\Controllers\FilmControler@createFilm')}}" method="POST">
+
+        {{csrf_field()}}
+
+        <h1>CREAR PELICULA</h1>
+        
+        <label for="Name">NAME:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="Year">YEAR:</label>
+        <input type="text" name="year" id="year" required>
+        <br>
+        <label for="Genre">GENRE:</label>
+        <input type="text" name="genre" id="genre" required>
+        <br>
+        <label for="Image">IMAGE_URL</label>
+        <input type="url" name="img_url" id="img_url" required>
+        <br>
+        <label for="Country">COUNTRY</label>
+        <input type="text" name="country" id="country" required>
+        <br>
+        <label for="Duration">Duration</label>
+        <input type="number" name="duration" id="duration" required>h
+
+        <br>
+        <input type="submit" value="ENVIAR">
+    </form>
+
+
 </body>
 
 </html>
