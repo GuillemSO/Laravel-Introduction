@@ -15,6 +15,14 @@ class ValidateUrl
      */
     public function handle(Request $request, Closure $next): Response
     {
+        $url = $request->url();
+
+        if($url) {
+            return redirect('/');
+        }
+        
+        
+
         return $next($request);
     }
 }
