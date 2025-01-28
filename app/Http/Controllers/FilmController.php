@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class FilmController extends Controller
@@ -159,5 +161,42 @@ class FilmController extends Controller
         
         
         return view("films.count", ["filmsArray" => $count, "title" => $title]);
+    }
+
+    /**
+     * Crear Pelicula
+     */
+    public function createFilm(Request $request)
+    {
+        $film = [
+            'name'=>$request->input('name'),
+            'year'=>$request->input('year'),
+            'genre'=>$request->input('genre'),
+            'img_url'=>$request->input('img_url'),
+            'country'=>$request->input('country'),
+            'duration'=>$request->input('duration')
+        ];
+
+        if(FilmController::isFilm($film['name'])){
+            return redirect('/');
+        }
+
+        
+    }
+
+    /**
+     * Comprobar nombre de la Pelicula
+     */
+    public function isFilm($nameFilm ){
+
+        $films = FilmController::readFilms();
+
+        foreach($films as $film){
+            if($film['name'] === $nameFilm){
+                return true;
+            }
+        }
+
+        return false;
     }
 }

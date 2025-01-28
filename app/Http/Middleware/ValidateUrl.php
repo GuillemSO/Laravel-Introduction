@@ -17,12 +17,10 @@ class ValidateUrl
     {
         $url = $request->url();
 
-        if($url) {
+        if(!filter_var($url, FILTER_VALIDATE_URL)){
             return redirect('/');
         }
         
-        
-
         return $next($request);
     }
 }
