@@ -15,10 +15,10 @@ class ValidateUrl
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $url = $request->url();
+        $url = $request->input('img_url');
 
         if(!filter_var($url, FILTER_VALIDATE_URL)){
-            return redirect('/');
+            return redirect('/')->withErrors(['wrongUrl' => '']);
         }
         
         return $next($request);

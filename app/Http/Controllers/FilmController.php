@@ -168,6 +168,8 @@ class FilmController extends Controller
      */
     public function createFilm(Request $request)
     {
+        $title = "Listado de todas las pelis";
+
         $film = [
             'name'=>$request->input('name'),
             'year'=>$request->input('year'),
@@ -178,9 +180,16 @@ class FilmController extends Controller
         ];
 
         if(FilmController::isFilm($film['name'])){
-            return redirect('/');
-        }
+           
+            return view("welcome", ["status" =>"Error, la pelicula ya existe"]);
 
+        }else{
+
+            $films = FilmController::readFilms();
+            array_push($films, $film);
+            Storage::put('/public/films.json', json_encode($films));
+            return view("films.list", ["films" => $films, "title" => $title]);
+        }
         
     }
 

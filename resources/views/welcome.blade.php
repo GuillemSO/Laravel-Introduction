@@ -28,8 +28,10 @@
 
     <!-- Include any additional HTML or Blade directives here -->
 
-
-    <form action="{{action('App\Http\Controllers\FilmControler@createFilm')}}" method="POST">
+    @if (!empty($status))
+        <p style="color:red;">{{$status}}</p>
+    @endif
+    <form action="{{action('App\Http\Controllers\FilmController@createFilm')}}" method="POST">
 
         {{csrf_field()}}
 
