@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-app-layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies List</title>
-
-    <!-- Add Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <!-- Include any additional stylesheets or scripts here -->
-</head>
-
-<body class="container">
-
-    <h1 class="mt-4">Lista de Peliculas</h1>
+<h1 class="mt-4">Lista de Peliculas</h1>
     <ul>
         <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
         <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
@@ -60,6 +46,4 @@
     </form>
 
 
-</body>
-
-</html>
+    </x-app-layout>
