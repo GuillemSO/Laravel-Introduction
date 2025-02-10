@@ -26,7 +26,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="img_url" class="form-label">Imagen (URL):</label>
-                                <input type="url" class="form-control" name="img_url" id="img_url" required>
+                                <input type="text" class="form-control" name="img_url" id="img_url" required>
                             </div>
                             <div class="mb-3">
                                 <label for="country" class="form-label">País:</label>

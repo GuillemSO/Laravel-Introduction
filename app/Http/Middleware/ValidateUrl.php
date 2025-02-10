@@ -18,7 +18,7 @@ class ValidateUrl
         $url = $request->input('img_url');
 
         if(!filter_var($url, FILTER_VALIDATE_URL)){
-            return redirect('/')->withErrors(['wrongUrl' => '']);
+            return response()->view("welcome", ["status" => "Error, la URL no es válida"]);
         }
         
         return $next($request);
