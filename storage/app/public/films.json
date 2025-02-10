@@ -5,7 +5,7 @@
         "genre": "Drama",
         "country": "Colombia",
         "duration": "240",
-        "img_url": "https:\/\/es.web.img2.acsta.net\/medias\/nmedia\/18\/79\/45\/34\/20253823.jpg"
+        "img_url": "https://es.web.img2.acsta.net/medias/nmedia/18/79/45/34/20253823.jpg"
     },
     {
         "name": "As Bestas",
@@ -13,7 +13,7 @@
         "genre": "Drama",
         "country": "Colombia",
         "duration": "240",
-        "img_url": "https:\/\/pics.filmaffinity.com\/As_bestas-275688233-large.jpg"
+        "img_url": "https://pics.filmaffinity.com/As_bestas-275688233-large.jpg"
     },
     {
         "name": "El Club de los Cinco",
@@ -21,7 +21,7 @@
         "genre": "Comedia",
         "country": "Colombia",
         "duration": "240",
-        "img_url": "https:\/\/pics.filmaffinity.com\/El_club_de_los_cinco-192309838-large.jpg"
+        "img_url": "https://pics.filmaffinity.com/El_club_de_los_cinco-192309838-large.jpg"
     },
     {
         "name": "Forrest Gump",
@@ -29,7 +29,7 @@
         "genre": "Drama",
         "country": "Colombia",
         "duration": "240",
-        "img_url": "https:\/\/pics.filmaffinity.com\/Forrest_Gump-212765827-large.jpg"
+        "img_url": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg"
     },
     {
         "name": "Arrival",
@@ -37,7 +37,7 @@
         "genre": "Ciencia Ficci\u00f3n",
         "country": "Colombia",
         "duration": "240",
-        "img_url": "https:\/\/pics.filmaffinity.com\/La_llegada-686966912-large.jpg"
+        "img_url": "https://pics.filmaffinity.com/La_llegada-686966912-large.jpg"
     },
     {
         "name": "re",
@@ -45,7 +45,7 @@
         "genre": "re",
         "country": "re",
         "duration": "43",
-        "img_url": "https:\/\/es.web.img2.acsta.net\/medias\/nmedia\/18\/79\/45\/34\/20253823.jpg"
+        "img_url": "https://es.web.img2.acsta.net/medias/nmedia/18/79/45/34/20253823.jpg"
     },
     {
         "name": "Shrek",
@@ -53,7 +53,7 @@
         "genre": "Comedy",
         "country": "Spain",
         "duration": "23",
-        "img_url": "https:\/\/www.pngegg.com\/en\/png-wsgga"
+        "img_url": "https://www.pngegg.com/en/png-wsgga"
     },
     {
         "name": "Shrek 2",
@@ -61,7 +61,7 @@
         "genre": "Comedy",
         "country": "Spain",
         "duration": "324",
-        "img_url": "https:\/\/www.pngegg.com\/en\/png-wsgga"
+        "img_url": "https://www.pngegg.com/en/png-wsgga"
     },
     {
         "name": "Shrek 2",
@@ -69,14 +69,22 @@
         "genre": "Comedy",
         "country": "Spain",
         "duration": "324",
-        "img_url": "https:\/\/www.pngegg.com\/en\/png-wsgga"
+        "img_url": "https://www.pngegg.com/en/png-wsgga"
     },
     {
         "name": "guillem",
         "year": "1969",
         "genre": "DRAMA",
-        "img_url": "https:\/\/s1.significados.com\/foto\/drama-og.jpg",
+        "img_url": "https://s1.significados.com/foto/drama-og.jpg",
         "country": "MADAGASCAR",
         "duration": "2"
+    },
+    {
+        "name": "eric",
+        "year": "2025",
+        "genre": "DRAMA",
+        "img_url": "https://s1.significados.com/foto/drama-og.jpg",
+        "country": "MADAGASCAR",
+        "duration": "4"
     }
 ]

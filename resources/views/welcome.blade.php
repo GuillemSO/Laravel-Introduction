@@ -1,49 +1,48 @@
 <x-app-layout>
-
-<h1 class="mt-4">Lista de Peliculas</h1>
-    <ul>
-        <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
-        <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
-        <li><a href=/filmout/sortFilms>Ordenar pelis por año</a></li>
-        <li><a href=/filmout/countFilms>Contador de pelis</a></li>
-    </ul>
-    <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Include any additional HTML or Blade directives here -->
-
-    @if (!empty($status))
-        <p style="color:red;">{{$status}}</p>
-    @endif
-    <form action="{{action('App\Http\Controllers\FilmController@createFilm')}}" method="POST">
-
-        {{csrf_field()}}
-
-        <h1>CREAR PELICULA</h1>
-        
-        <label for="Name">NAME:</label>
-        <input type="text" name="name" id="name" required>
-        <br>
-        <label for="Year">YEAR:</label>
-        <input type="text" name="year" id="year" required>
-        <br>
-        <label for="Genre">GENRE:</label>
-        <input type="text" name="genre" id="genre" required>
-        <br>
-        <label for="Image">IMAGE_URL</label>
-        <input type="url" name="img_url" id="img_url" required>
-        <br>
-        <label for="Country">COUNTRY</label>
-        <input type="text" name="country" id="country" required>
-        <br>
-        <label for="Duration">Duration</label>
-        <input type="number" name="duration" id="duration" required>h
-
-        <br>
-        <input type="submit" value="ENVIAR">
-    </form>
-
-
-    </x-app-layout>
+    <div class="container mt-5 mb-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-dark text-white text-center">
+                        <h2>Crear Película</h2>
+                    </div>
+                    <div class="card-body">
+                        @if (!empty($status))
+                            <div class="alert alert-danger text-center">{{$status}}</div>
+                        @endif
+                        <form action="{{action('App\Http\Controllers\FilmController@createFilm')}}" method="POST">
+                            {{csrf_field()}}
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" name="name" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="year" class="form-label">Año:</label>
+                                <input type="text" class="form-control" name="year" id="year" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="genre" class="form-label">Género:</label>
+                                <input type="text" class="form-control" name="genre" id="genre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="img_url" class="form-label">Imagen (URL):</label>
+                                <input type="url" class="form-control" name="img_url" id="img_url" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="country" class="form-label">País:</label>
+                                <input type="text" class="form-control" name="country" id="country" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="duration" class="form-label">Duración (h):</label>
+                                <input type="number" class="form-control" name="duration" id="duration" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
