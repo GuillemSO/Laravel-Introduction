@@ -17,7 +17,7 @@ class FilmsSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        $lastInsertedId = DB::table("films")->max("id");
+        $lastInsertedId = DB::table("actors")->max("id");
 
         // function generateGenre(){
         //     $genreTypes = [];
