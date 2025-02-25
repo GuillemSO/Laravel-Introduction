@@ -10,16 +10,20 @@
     
     <header class="bg-dark text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h3">FILMS</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="/filmout/oldFilms">Pelis antiguas</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="/filmout/newFilms">Pelis nuevas</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="/filmout/sortFilms">Ordenar pelis</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="/filmout/countFilms">Contador</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="d-flex align-items-center">
+        <img class="me-2" src="/img/foto-removebg-preview.png" alt="" width="40">
+        <h1 class="h3 mb-0">FILMS</h1>
+    </div>
+        <nav class="ms-auto">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="/filmout/oldFilms">Pelis antiguas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/filmout/newFilms">Pelis nuevas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/filmout/sortFilms">Ordenar pelis</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/filmout/countFilms">Contador</a></li>
+            </ul>
+    </nav>
+    </div>
+
     </header>
     
     <main class="container mt-4 mb-4">
