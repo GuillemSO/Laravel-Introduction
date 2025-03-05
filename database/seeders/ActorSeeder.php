@@ -28,6 +28,7 @@ class ActorSeeder extends Seeder
                     "birthdate" => $faker->date(),
                     "country" => $faker->country(),
                     "img_url" => $faker->imageUrl(),
+                    "salary" => $faker->numberBetween(2000,7000),
                     "created_at" => $faker->dateTimeBetween("-10 years", "now")->format('Y-m-d'),
                     "updated_at" => $faker->dateTimeBetween("-10 years","now")
                 ]
