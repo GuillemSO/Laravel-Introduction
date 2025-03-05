@@ -179,6 +179,12 @@ class FilmController extends Controller
             'duration'=>$request->input('duration')
         ];
 
+        if(!FilmController::correctYear($film['year'])){
+           
+            return view("welcome", ["status" =>"Error, el año de la película debe de ser entre 1900-2024"]);
+
+        }
+
         if(FilmController::isFilm($film['name'])){
            
             return view("welcome", ["status" =>"Error, la pelicula ya existe"]);
@@ -207,5 +213,14 @@ class FilmController extends Controller
         }
 
         return false;
+    }
+
+
+    public function correctYear($year){
+        //Validate if the film is in a year between 1900-2024
+        if($year < 1900 || $year > 2024){
+            return false;
+        }
+        return true;
     }
 }
