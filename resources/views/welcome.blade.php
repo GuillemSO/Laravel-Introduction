@@ -18,11 +18,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="year" class="form-label">Año:</label>
-                                <input type="text" class="form-control" name="year" id="year" required>
+                                <input type="text" class="form-control" name="year" id="year" placeholder="1999" required>
                             </div>
                             <div class="mb-3">
                                 <label for="genre" class="form-label">Género:</label>
-                                <input type="text" class="form-control" name="genre" id="genre" required>
+                                <input type="text" class="form-control" name="genre" id="genre"  placeholder="Drama" required>
                             </div>
                             <div class="mb-3">
                                 <label for="img_url" class="form-label">Imagen (URL):</label>
@@ -30,11 +30,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="country" class="form-label">País:</label>
-                                <input type="text" class="form-control" name="country" id="country" required>
+                                <input type="text" class="form-control" name="country" id="country" placeholder="Spain" required>
                             </div>
                             <div class="mb-3">
                                 <label for="duration" class="form-label">Duración (h):</label>
-                                <input type="number" class="form-control" name="duration" id="duration" required>
+                                <input type="number" class="form-control" name="duration" id="duration" placeholder="1/2/3/4" required>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Enviar</button>
