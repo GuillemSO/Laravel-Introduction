@@ -53,7 +53,7 @@ For more details, check out the [issues here](https://github.com/Stucom-Pelai/M0
 # Technical Design
 
 ## FR1 List Actors
-1. Create a new route (inside group `actorout`) called `actors`.
+1. [x] Create a new route (inside group `actorout`) called `actors`.
 2. Create a new controller called `ActorController`.
 3. Modify view `welcome` to add a hyperlink to route `actors`.
 4. Create a list view in `views/actors` folder.
