@@ -8,10 +8,10 @@
 5. [x] Define function `listActors` to get data and return it as a list view.
 
 ## FR2 List Actors by Decade
-1. [] Create a new route (inside group `actorout`) called `listActorsByDecade`.
-2. [] Include middleware `year` to validate routes with a given year.
-3. [] Modify view `welcome` to add a form with a dropdown and proper route.
-4. [] Define function `listActorsByDecade/{year}` to get data where birthdate  
+1. [x] Create a new route (inside group `actorout`) called `listActorsByDecade`.
+2. [x] Include middleware `year` to validate routes with a given year.
+3. [x] Modify view `welcome` to add a form with a dropdown and proper route.
+4. [x] Define function `listActorsByDecade/{year}` to get data where birthdate  
    is between selected years. Return results as a list view.
 
 ## FR3 Count Actors
