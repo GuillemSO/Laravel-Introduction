@@ -1,6 +1,6 @@
 # Technical Design
 
-## FR1 List Actors
+## [x] FR1 List Actors
 1. [x] Create a new route (inside group `actorout`) called `actors`.
 2. [x] Create a new controller called `ActorController`.
 3. [x] Modify view `welcome` to add a hyperlink to route `actors`.
