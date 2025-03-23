@@ -14,7 +14,7 @@ class FilmController extends Controller
      */
     public static function readFilms(): array 
     {
-            // Obtener películas desde JSON
+        // Obtener películas desde JSON
         $filmsJson = Storage::exists('public/films.json') ? json_decode(Storage::get('public/films.json'), true) : [];
 
         // Obtener películas desde la base de datos
@@ -232,5 +232,24 @@ class FilmController extends Controller
             return false;
         }
         return true;
+    }
+
+    public function deleteFilm($id)
+    {
+        $film = DB::table('films')->where('id', $id)->first();
+
+        if (!$film) {
+            return response()->json([
+                'action' => 'delete',
+                'status' => false
+            ], 404);
+        }
+
+        $deleted = DB::table('films')->where('id', $id)->delete();
+
+        return response()->json([
+            'action' => 'delete',
+            'status' => $deleted ? true : false
+        ]);
     }
 }
