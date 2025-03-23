@@ -252,4 +252,19 @@ class FilmController extends Controller
             'status' => $deleted ? true : false
         ]);
     }
+
+    public function actorsByFilm($id)
+    {
+        $actors = DB::table('films_actors')
+            ->join('actors', 'films_actors.actor_id', '=', 'actors.id')
+            ->where('films_actors.film_id', $id)
+            ->select('actors.id', 'actors.name', 'actors.birthdate') 
+            ->get();
+
+        if ($actors->isEmpty()) {
+            return response()->json(['message' => 'No se encontraron actores para esta película'], 404);
+        }
+
+        return response()->json($actors, 200);
+    }
 }
