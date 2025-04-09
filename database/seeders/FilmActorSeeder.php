@@ -2,10 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Film;
+use App\Models\Actor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Facades\DB;
+
 class FilmActorSeeder extends Seeder
 {
     /**
@@ -13,22 +16,11 @@ class FilmActorSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create();
+        $films = Film::all();
+        $actors = Actor::all();
 
-
-        $filmId = DB::table("films")->inRandomOrder()->value("id");
-
-        $actorsIds = DB::table("actors")->inRandomOrder()->limit(3)->pluck('id')->toArray();
-
-        foreach($actorsIds as $actorId){
-            DB::table("films_actors")->insert(
-                [
-                            "film_id" => $filmId,
-                            "actor_id" => $actorId,
-                            "created_at" => $faker->dateTimeBetween("-10 years", "now")->format('Y-m-d'),
-                            "updated_at" => $faker->dateTimeBetween("-10 years","now")
-                        ]
-                    );     
+        foreach ($films as $film) {
+            $film->actors()->attach($actors->random(rand(1, 3))->pluck('id')->toArray());
         }
     }
 }

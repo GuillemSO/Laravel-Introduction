@@ -6,15 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::create('films_actors', function (Blueprint $table) {
-            $table->foreignId("film_id")->constrained("films")->cascadeOnDelete();
-            $table->foreignId("actor_id")->constrained("actors")->cascadeOnDelete();
-            $table->timestampsTz(precision:0);
+            $table->foreignId('film_id')->constrained('films')->cascadeOnDelete();
+            $table->foreignId('actor_id')->constrained('actors')->cascadeOnDelete();
+            $table->timestampsTz(precision: 0);
         });
     }
 
