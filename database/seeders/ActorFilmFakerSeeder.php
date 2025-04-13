@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Film;
-use App\Models\Actor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
-use Illuminate\Support\Facades\DB;
 
-class FilmActorSeeder extends Seeder
+use App\Models\Actor;
+use App\Models\Film;
+
+class ActorFilmFakerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
