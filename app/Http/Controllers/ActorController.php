@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\DB;
 
 class ActorController extends Controller
 {
+    public static function index()
+    {
+        $actors = Actor::with('films')->get();
 
+        return response()->json($actors);
+    }
 
+    
     public function listActors()
     {
         $title = "Listado de todos los actores";
@@ -31,7 +37,7 @@ class ActorController extends Controller
 
         $title = "Actores nacidos entre $startYear y $endYear";
         
-        $actors = Actor::whereBetween(DB::raw('YEAR(birthdate)'), [$startYear, $endYear])->get();
+    $actors = Actor::whereBetween(DB::raw('YEAR(birthdate)'), [$startYear, $endYear])->get();
 
         return view('actors.list', ['actors' => $actors, 'title' => $title]);
     }
