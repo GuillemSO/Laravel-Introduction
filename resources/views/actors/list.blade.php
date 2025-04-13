@@ -19,39 +19,29 @@
 </form>
 
 
-@if(empty($actors))
-    <FONT COLOR="red">No se ha encontrado ningun actor</FONT>
+@if ($actors->isEmpty())
+        <FONT COLOR="red">No se ha encontrado ninguna actor</FONT>
 @else
     <div align="center">
-    <table class="table">
-        <thead>
-            <tr>
-            @foreach($actors as $actor)
-                @foreach(array_keys($actor) as $key)
-                    <th scope="col">{{$key}}</th>
+            <table border="2">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cumpleaños</th>
+                    <th>País</th>
+                    <th>Imagen</th>
+                </tr>
+        
+                @foreach ($actors as $actor)
+                    <tr style="border: 1px solid black">
+                        <td>{{ $actor->name }}</td>
+                        <td>{{ $actor->surname }}</td>
+                        <td>{{ $actor->birthdate }}</td>
+                        <td>{{ $actor->country }}</td>
+                        <td><img src={{ $actor->img_url }} style="width: 100px; height: 120px;" /></td>
+                    </tr>
                 @endforeach
-                @break
-            @endforeach
-            </tr>
-        </thead>
-        
-        <tbody>
-            @foreach($actors as $actor)
-            <tr >
-                <td scope="col">{{$actor['id']}}</td>
-                <td>{{$actor['name']}}</td>
-                <td>{{$actor['surname']}}</td>
-                <td>{{$actor['birthdate']}}</td>
-                <td>{{$actor['country']}}</td>
-                <td><img src={{$actor['img_url']}} style="width: 100px; heigth: 120px;" /></td>
-                <td>{{$actor['salary']}}</td>
-                <td>{{ $actor['created_at'] }}</td>
-                <td>{{ $actor['updated_at'] }}</td>
-            </tr>
-             @endforeach
-        </tbody>
-        
-    </table>
-</div>
-@endif
+            </table>
+        </div>
+    @endif
 </x-app-layout>
